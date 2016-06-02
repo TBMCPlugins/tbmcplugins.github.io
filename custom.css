@@ -3,7 +3,7 @@ body {
    background-repeat: repeat;
 }
 canvas {
-   padding: 10;
+   padding: 20;
    margin-left: auto;
    margin-right: auto;
    display: block;
@@ -11,7 +11,20 @@ canvas {
    height: 170px;
    box-shadow: 10px 10px 5px #333333;
 }
-
+h1{
+   font-family: "Verdana", serif;
+   text-align: center;
+   font-size: 4em;
+   color: white;
+   text-shadow: 8px 8px 10px #222222;
+}
+h3{
+   font-family: "Verdana", serif;
+   text-align: center;
+   font-size: 1.5em;
+   color: white;
+   text-shadow: 3px 3px 3px #222222;
+}
 #buttonDiv {
    width: 500px
    height: 170px
