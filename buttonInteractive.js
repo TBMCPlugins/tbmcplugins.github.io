@@ -7,8 +7,8 @@ var grayDiamondImage = new Image();
 grayDiamondImage.src = "grayDiamond.png";
 
 //From Server Variables
-var minimumTime = 55;
-var diamondIsAvailable = true;
+var minimumTime = 59;
+var diamondIsAvailable = false;
 var participants = 0;
 var fullPresserProbabilities;
 var todaysAggregatePresserProbabilities = [];
@@ -52,6 +52,10 @@ window.onload = function(){
 	canvas = document.getElementById('buttonCanvas');
 	canvasContext = canvas.getContext('2d');
 	canvasContext.fillStyle = "black";
+	
+	//Prevents click-through
+	var canvas = document.getElementById('buttonCanvas');
+	canvas.onselectstart = function () { return false; }
 	
 	//Inner Main Loop
     setInterval(function() {
@@ -188,8 +192,10 @@ function drawButton(){
 	
 	//Inner Button
 	canvasContext.fillStyle = "#1A7FB5";
+	canvasContext.fillStyle = "#777777";
 	fillRoundRect(canvasContext,35+10,65+10,190-20,60-20,3);
-	canvasContext.fillStyle = "#2DAAEB";
+	//canvasContext.fillStyle = "#2DAAEB";
+	canvasContext.fillStyle = "#AAAAAA";
 	fillRoundRect(canvasContext,35+10,65+10-buttonDepth,190-20,60-20-buttonDepth,3);
 	
 }
