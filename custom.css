@@ -1,0 +1,21 @@
+body {
+   background-image: url("stoneBrick.png");
+   background-repeat: repeat;
+}
+canvas {
+   padding: 10;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   width: 570px;
+   height: 170px;
+   box-shadow: 10px 10px 5px #333333;
+}
+
+#buttonDiv {
+   width: 500px
+   height: 170px
+}
+
+
+
