@@ -7,7 +7,7 @@ var grayDiamondImage = new Image();
 grayDiamondImage.src = "grayDiamond.png";
 
 //From Server Variables
-var minimumTime = 55;
+var minimumTime = 52;
 var diamondIsAvailable = false;
 var participants = 0;
 var fullPresserProbabilities;
