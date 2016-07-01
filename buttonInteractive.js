@@ -7,7 +7,7 @@ var grayDiamondImage = new Image();
 grayDiamondImage.src = "grayDiamond.png";
 
 //From Server Variables
-var minimumTime = 52;
+var minimumTime = 0;
 var diamondIsAvailable = false;
 var participants = 0;
 var fullPresserProbabilities;
@@ -30,6 +30,7 @@ var outerRingRedEffect = 234;
 var outerRingGeneralEffect = 234;
 var currentSecond = 60;
 var presserMillisecondRandomness = 0;
+var PressColour = "Grey";
 
 //Mouse Position Calculator
 function calculateMousePos(evt){
@@ -79,7 +80,26 @@ window.onload = function(){
 		var mousePos = calculateMousePos(evt);
 		if (mousePos.x > 45 && mousePos.y > 75 && mousePos.x < 170+45 && mousePos.y < 40+75 && buttonPress == true) {
 			//Button Is Pressed
-            pressNumber = buttonTimeCountingDown
+		    pressNumber = buttonTimeCountingDown / 1000;
+		    console.log(pressNumber);
+		    if (pressNumber > 60) {
+		        PressColour = "Purple";
+		    } else if (pressNumber >= 50) {
+		        PressColour = "Purple";
+		    } else if (pressNumber >= 40) {
+		        PressColour = "Blue";
+		    } else if (pressNumber >= 30) {
+		        PressColour = "Green";
+		    } else if (pressNumber >= 20) {
+		        PressColour = "Yellow";
+		    } else if (pressNumber >= 10) {
+		        PressColour = "Orange";
+		    } else if (pressNumber >= 0) {
+		        PressColour = "Red";
+		    } else {
+		        PressColour = "Red";
+		    }
+
 			resetButton();
 			
         }
@@ -126,9 +146,7 @@ function presserSimulator(args) {
 	
     if (buttonTimeCountingDown <= (currentSecond+presserMillisecondRandomness)*1000) {
 		currentSecond--;
-		console.log("PING", currentSecond);
-		if(Math.random() <= 20.0/100.0) {
-			console.log("PRESS!");
+		if(Math.random() <= 2.0/100.0) {
            resetButton();
         }
 		presserMillisecondRandomness = Math.random()*.9;
@@ -151,9 +169,10 @@ function minimumTimeHandler(a) {
 
 
 //Draws Background
-function drawBackground(){
+function drawBackground() {
     canvasContext.fillStyle = "#FAFAFA";
     canvasContext.fillRect(0,0,canvas.width, canvas.height);
+
 }
 
 
@@ -176,8 +195,29 @@ function drawTitle(){
 function drawButton(){
 	
 	//Outer Button
-	
-	canvasContext.fillStyle = "rgb(234,234,234)";
+    switch (PressColour) {
+        case "Red":
+            canvasContext.fillStyle = "#DD3333";
+            break;
+        case "Orange":
+            canvasContext.fillStyle = "#FFAA33";
+            break;
+        case "Yellow":
+            canvasContext.fillStyle = "#FFE300";
+            break;
+        case "Green":
+            canvasContext.fillStyle = "#AAFF77";
+            break;
+        case "Blue":
+            canvasContext.fillStyle = "#77AAFF";
+            break;
+        case "Purple":
+            canvasContext.fillStyle = "#9966CC";
+            break;
+        default:
+            canvasContext.fillStyle = "rgb(234,234,234)";
+            break;
+    }
 	fillRoundRect(canvasContext,35,65,190,60,3);
 
 	//Press Detector
@@ -223,7 +263,7 @@ function drawPieChart(){
         }else if (outerRingGeneralEffect < 234) {
 			outerRingGeneralEffect += 5;
 		}
-		canvasContext.fillStyle = "rgb("+outerRingGeneralEffect+","+outerRingGeneralEffect+","+outerRingGeneralEffect+")";
+		canvasContext.fillStyle = "rgb(" + outerRingGeneralEffect + "," + outerRingGeneralEffect + "," + outerRingGeneralEffect + ")";
 	}
 	
 	
