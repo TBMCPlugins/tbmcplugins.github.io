@@ -9,7 +9,7 @@ The first one, I'm gonna call BLOCK LOGIC
       - a plugin granting in-game users the ability to specify arguments in a block's data. 
       These are, in a sense, stored "block commands" with a syntax  similar to player commands.
 
-            - each class has an array or "tree" of one or more event listener tags, with subsequent 
+            - each block has an array or "tree" of one or more event listener tags, with subsequent 
             arguments specifying what to do on-event.
 
             - next, an ordered list of conditions to check for on-event. Are there such-and-such blocks adjacent
