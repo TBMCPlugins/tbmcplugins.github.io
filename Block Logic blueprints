@@ -4,12 +4,12 @@ Building blocks of code
 
 Many of these ideas [from before this excerpt] share core functions, and could themselves be products of a few more universal plugins.
 
-The first one, I'm gonna call BLOCK LOGIC
+The first one [of these universeal plugins], I'm gonna call BLOCK LOGIC
 
       - a plugin granting in-game users the ability to specify arguments in a block's data. 
       These are, in a sense, stored "block commands" with a syntax  similar to player commands.
 
-            - each block has an array or "tree" of one or more event listener tags, with subsequent 
+            - each block has an array or "tree" of one or more event listeners, with subsequent 
             arguments specifying what to do on-event.
 
             - next, an ordered list of conditions to check for on-event. Are there such-and-such blocks adjacent
@@ -27,16 +27,16 @@ The first one, I'm gonna call BLOCK LOGIC
       (To minimize hardware impact we can possibly specify how many blocks can be evaluated at once,
       or specify a cooldown before certain events may be "listened to" again)
 
-BUILDING BLOCKS FOR THIS CODE:
 
-a GLOBAL EVENT LISTENER, which calls up all classes tagged to act on an event (from an INDEX OF BLOCK-ACTIONABLE EVENTS)
+
+we have a GLOBAL EVENT LISTENER, which, on-event, calls up all classes tagged to act on that event (from an INDEX OF BLOCK-ACTIONABLE EVENTS)
 
 a LOGIC PARSER that evaluates each called class's logic tree
 
 a CONDITION LIBRARY defining all conditions and condition-evaluating procedures, which the Parser will reference. 
       Table of Contents listing all conditions by Name
-      the coded conditions themselves
-            with accompanying code describing how to evaluate each condition, returning True or False
+      the coded conditions themselves, called by those names
+            with accompanying code describing how to evaluate each condition, returning True or False to the logic parser
 
 Finally we have a BLOCK ACTION LIBRARY, defining all actions a block can take.
 
@@ -45,5 +45,6 @@ Finally we have a BLOCK ACTION LIBRARY, defining all actions a block can take.
 
 
 
-All of this code can be built piece by piece in manageable segments
+All of this code can be built piece by piece in manageable segments, starting with the framework then adding to the LIBRARIES over time
 :D
+
