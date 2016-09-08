@@ -1,0 +1,103 @@
+Part Two
+
+USER INTERFACE
+how will players interact with Block Logic, defining and naming classes, rearranging their heirarchy of importance, setting limits
+on how many actions the plugin will take per-event, or per-class, or per-second/minute?
+
+how will mods and admins set what normal players can and cannot do with this plugin? For example, which blocks can or cannot
+perform which block-actions; or, how complex can logic trees be for certain listened events; or, which blocks can listen to which
+events; or even, which blocks can store classes at all?
+
+my goal here is once again to keep everything as simple to code as possible, and that includes the user interface. The fewer
+moving parts and settings, the better. 
+
+      Commands:
+      
+      
+      
+        Lists:
+        
+          LIST CONTENTS OF LIBRARY (from .yml)
+          
+          HELP TEXT FOR ENTRY "entry" OF LIBRARY "library" (also from .yml)
+            examples:
+              "Condition northBlockHasInventory: Adjacent block to the north has an inventory, return true"
+                  allowed_block_types: (list of block IDs this block can have)
+                  
+              "Event playerStepOnThisBlock: Player has stepped on this block"
+                  event_range: 0
+                  
+              "Action blockSetClass: Reassigns this block's class"
+                  denied_classes: (list of classes blockSetClass cannot assign)
+                  
+              "Public_Class becomesRedstoneOnChatEvent: ayy, like the name says"
+                  author: iie
+                  allowed_block_types: 
+                  BLOCK LOGIC: 
+                               bleh>bleh
+                                    bleh>wat>beebeebee>ooh?>yes Action
+                                    boob>tit>microwave?>eh>no   Action
+                                            >notmicrowave>ok    Action
+                                         Action
+          
+          
+          
+        Functions:
+        
+          ARRANGE PRIORITY
+            what does the plugin do first, per category?
+              GET or SET an entry's place in its list
+              
+          RENAME
+          
+          SET/REMOVE PARAMETER
+          
+          MAKE CLASS PUBLIC/PRIVATE
+            toggles which classes the plebs can see and use
+          
+          
+          
+        Create Class:
+        
+          CLASS FROM BOOK
+            converts text of a player's held book into new block class
+            
+          CREATE CLASS (generic - chat or command block usage)
+          
+          
+          
+        Permissions:
+        
+          CREATE PERMISSION CLASS
+            example: Permission Class "iieMadeThisForZang"
+              SCOREBOARD VALUE: 123
+              allowed_events:
+              denied_events:
+              allowed_conditions:
+              denied_condisions:
+              allowed_actions:
+              denied_actions:
+              private_class:
+              max_tree_size:
+              etc...
+            
+            then set Zang's BlockLogicPermission score to 123
+            
+          LIST PERMISSION CLASSES
+          
+          SET/REMOVE PARAMETER
+          
+          RENAME CLASS
+          
+          DELETE CLASS
+ 
+
+
+
+==============
+     NOTE
+==============
+
+I again tried to make everything here ELASTIC
+
+meaning this can start small and grow over time, piece by piece.
