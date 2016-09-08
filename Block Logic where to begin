@@ -1,0 +1,17 @@
+Much of this plugin can be grown over time, but the following must exist at the outset:
+
+
+.yml files with basic skeleton structure set
+
+empty libraries, in the form of packages (with classes as the "books" to be added later)
+
+Global Listener, also a package, including classes for individual event listeners (these classes required now)
+    each listener searches the Events library ^ for classes that use the event, then calls those classes, AND NOTHING MORE
+    those classes (the books to be added later) contain the actual code to execute on-event
+
+Logic Parser, able to search libraries for named conditions and actions listed in a Block Class, and retrieve a true or false value
+    (the Block Class has been called by some code in the Events Library package, which was called by the Global Listener)
+
+
+
+
