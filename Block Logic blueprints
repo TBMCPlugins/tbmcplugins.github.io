@@ -29,7 +29,7 @@ The first one [of these universeal plugins], I'm gonna call BLOCK LOGIC
 
 
 
-we have a GLOBAL EVENT LISTENER, which, on-event, calls up all classes tagged to act on that event (from an INDEX OF BLOCK-ACTIONABLE EVENTS)
+we have a GLOBAL EVENT LISTENER, which, on-event, calls up all classes tagged to act on that event
 
 a LOGIC PARSER that evaluates each called class's logic tree
 
