@@ -139,7 +139,7 @@ function main(){
 	
 	
 	//Draws Remaining Non-timed Elements
-	drawDiamond();
+	//drawDiamond();
 	
 }
 function presserSimulator(args) {
@@ -212,7 +212,7 @@ function drawButton(){
             canvasContext.fillStyle = "#77AAFF";
             break;
         case "Purple":
-            canvasContext.fillStyle = "#9966CC";
+            canvasContext.fillStyle = "#AA77DD";
             break;
         default:
             canvasContext.fillStyle = "rgb(234,234,234)";
@@ -232,10 +232,10 @@ function drawButton(){
 	
 	//Inner Button
 	canvasContext.fillStyle = "#1A7FB5";
-	canvasContext.fillStyle = "#777777";
+	//canvasContext.fillStyle = "#777777";
 	fillRoundRect(canvasContext,35+10,65+10,190-20,60-20,3);
-	//canvasContext.fillStyle = "#2DAAEB";
-	canvasContext.fillStyle = "#AAAAAA";
+	canvasContext.fillStyle = "#2DAAEB";
+	//canvasContext.fillStyle = "#AAAAAA";
 	fillRoundRect(canvasContext,35+10,65+10-buttonDepth,190-20,60-20-buttonDepth,3);
 	
 }
@@ -353,7 +353,7 @@ function drawParticipants(){
 	canvasContext.fillStyle = "black"
 	canvasContext.font = "13px Georgia";
 	canvasContext.textAlign = "right";
-	canvasContext.fillText(buttonTime + " participants", 435+110,35+15);
+	canvasContext.fillText("IP: server.figytuna.com", 435+110,35+15);
 	canvasContext.textAlign = "left";
 	
 }
