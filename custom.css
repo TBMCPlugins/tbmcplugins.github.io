@@ -28,8 +28,9 @@ a{
     color: white;
 }
 #buttonDiv {
-   width: 500px
-   height: 170px
+   width: 500px;
+   height: 170px;
+   margin: auto;
 }
 #dynmap {
     margin-right: auto;
@@ -58,4 +59,27 @@ a{
    
 }
 
+#worlds
+{
+   margin: auto;
+   width: 80%;
+   text-align: center;
+}
 
+#worlds table, td
+{
+   border: 2px solid white;
+   width: 80%;
+}
+
+table
+{
+   width: 100%;
+}
+
+a, p
+{
+   font-family: "Verdana", serif;
+   color: white;
+   text-shadow: 1px 1px 1px #222222;
+}
