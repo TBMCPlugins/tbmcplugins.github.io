@@ -28,6 +28,7 @@ h3{
 #buttonDiv {
    width: 500px;
    height: 170px;
+   margin: auto;
 }
 .bitcoinQRcode{
    margin:auto;
@@ -44,6 +45,12 @@ h3{
 #worlds table, td
 {
    border: 2px solid white;
+   width: 80%;
+}
+
+table
+{
+   width: 100%;
 }
 
 a, p
