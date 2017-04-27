@@ -20,18 +20,42 @@ h1{
 }
 h3{
    font-family: "Verdana", serif;
-   text-align: center;
-   font-size: 1.5em;
+   font-size: 1.7em;
    color: white;
    text-shadow: 3px 3px 3px #222222;
+}
+a{
+    color: white;
 }
 #buttonDiv {
    width: 500px
    height: 170px
 }
-.bitcoinQRcode{
-   margin:auto;
-   width: 50%;
+#dynmap {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+#reddit {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+#discord {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+#donate{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+#bitcoinQRcode{
+   margin-right: auto;
+   margin-left: auto;
+   text-align: center;
+   
 }
 
 
