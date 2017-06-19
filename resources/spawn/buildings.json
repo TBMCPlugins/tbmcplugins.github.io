@@ -1,0 +1,22 @@
+{
+  "buildings": {
+    "rule-house":{
+      "id": "rule-house",
+      "name": "Rule House",
+      "use": "This building is where the rule signs are located. The signs should be accessible to read and should be the most important part of the room.",
+      "designed": true,
+      "started": true,
+      "completed": true,
+      "populated": true
+    },
+    "marketplace":{
+      "id": "marketplace",
+      "name": "Marketplace",
+      "use": "Here players can gather around, buying, selling, and trading materials. There should be plenty of space for players to set up their own shops, stands and stores",
+      "designed": false,
+      "started": false,
+      "completed": false,
+      "populated": false
+    }
+  }
+}

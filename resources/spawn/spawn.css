@@ -1,0 +1,18 @@
+#progress-table{
+  font-family: "Calibri";
+  margin: 10px;
+  align: center;
+}
+#progress-table th{
+  border-bottom: solid gray;
+  border-width: thin;
+}
+#progress-table td{
+  border-bottom: solid lightgray;
+  border-width: thin;
+  max-width: 500px;
+  padding: 5px;
+}
+#progress-table .checkboxCell {
+  text-align: center;
+}

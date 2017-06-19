@@ -1,0 +1,48 @@
+{
+  "scenarios": [
+    {
+      "name": "base-raid",
+      "description":
+        "You find your base raided: All of your stuff is missing, chests are empty. What would be your first action?",
+      "options": [
+        "Try to find who stole the goods, and try to get it back",
+        "Go to the moderators, and report what happened",
+        "Ignore it all, and try to gather resources to recover",
+        "Question yourself, has your base really been raided?"
+      ],
+      "question": null,
+      "adult": false,
+      "other": true
+    },
+    {
+      "name": "rule-1",
+      "description":
+        "Someone is breaking Rule #1 and well... being a dick. They are angry about (having their base raided/being harrassed by another member/their family treating them unfairly/griefers destroying their base), and are swearing, insulting people, and generally making chat a negative enviornment. What is your first action?",
+      "options":[
+        "Attempt to defuse the situation, listening to them",
+        "Go to the moderators, report what happened",
+        "See if there is some way to distract them from their issues",
+        "Ignore them with /ignore, and continue playing"
+      ],
+      "question":
+        "If you were a moderator, what would you choose instead?",
+      "adult": false,
+      "other": true
+    },
+    {
+      "name": "gio",
+      "description":
+        "One of your friends is upset. Someone has been harrassing them, asking for innapropriate pictures, constantly private messaging them without their consent. <br/>Your friend is visibly uncomfortable, what would be your first action?",
+      "options":[
+        "Try to listen to both sides, see what the other person has to say",
+        "Go to the moderators, and report what happened",
+        "Try to cheer up your friend, diverting their attention to something else",
+        "Listen to your friend, and reccommend some advice"
+      ],
+      "question":
+        "If this situation were happening to you, what option would you choose?",
+      "adult": true,
+      "other": true
+    }
+  ]
+}
