@@ -5,6 +5,24 @@
     <HEAD>
         <LINK href="./custom.css" rel="stylesheet" type="text/css">
 		<script src="include.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "content": {
+    "message": "This website uses cookies to mainly provide the ability to log in and access user preferences. We don't use them for ad targeting."
+  }
+})});
+</script>
     </HEAD>
 	    
 	    <div id="logins">
